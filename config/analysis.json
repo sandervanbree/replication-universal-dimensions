@@ -1,0 +1,63 @@
+{
+  "pca_root": "data/pca",
+  "feature_root": "data/cache/bonner-models/features",
+  "beta_root": "data/betas/roi=laion-general",
+  "output_root": "outputs",
+  "model_sets": [
+    "resnet18_classification_imagenet1k_varied_seeds",
+    "classification_imagenet1k_varied_architectures",
+    "resnet50_imagenet1k_varied_tasks",
+    "untrained_resnet18_varied_seeds"
+  ],
+  "subjects": [
+    "sub-01",
+    "sub-03",
+    "sub-05",
+    "sub-06",
+    "sub-07"
+  ],
+  "modes": [
+    "shared",
+    "generalization_tau",
+    "generalization_cluster_k5_0",
+    "generalization_cluster_k5_1",
+    "generalization_cluster_k5_2",
+    "generalization_cluster_k5_3",
+    "generalization_cluster_k5_4",
+    "generalization_ood"
+  ],
+  "main_mode": "shared",
+  "transfer_train_mode": "shared",
+  "transfer_modes": [
+    "generalization_tau",
+    "generalization_cluster_k5_0",
+    "generalization_cluster_k5_1",
+    "generalization_cluster_k5_2",
+    "generalization_cluster_k5_3",
+    "generalization_cluster_k5_4",
+    "generalization_ood"
+  ],
+  "generalization_splits_path": "generalization/stimulus_splits.csv",
+  "reliability_summary_path": "generalization/reliability_summary.csv",
+  "roi": "laion-general",
+  "regression": "ridgecv",
+  "n_folds": 5,
+  "seed": 11,
+  "alphas": [
+    0.0,
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0
+  ],
+  "n_permutations": 5000,
+  "device": "cpu",
+  "figure_formats": [
+    "png",
+    "pdf"
+  ]
+}

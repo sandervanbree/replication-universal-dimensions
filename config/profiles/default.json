@@ -1,0 +1,23 @@
+{
+  "profile": "default",
+  "paths": {
+    "replication_root": ".",
+    "laion_data_root": "data/laion_fmri",
+    "beta_root": "data/betas",
+    "output_root": "outputs",
+    "results_root": "results"
+  },
+  "dataset": {
+    "roi": "laion-general",
+    "stimulus_mode": "shared",
+    "subjects": [
+      "sub-01",
+      "sub-03",
+      "sub-05",
+      "sub-06",
+      "sub-07"
+    ],
+    "n_stimuli": null,
+    "random_seed": 11
+  }
+}

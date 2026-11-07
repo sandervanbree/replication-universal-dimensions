@@ -1,0 +1,8 @@
+split,pool,variant_id,n_train,n_test
+tau,shared,0,897,224
+cluster_k5_0,shared,0,847,274
+cluster_k5_1,shared,0,873,248
+cluster_k5_2,shared,0,875,246
+cluster_k5_3,shared,0,896,225
+cluster_k5_4,shared,0,993,128
+ood,shared,0,1121,371
