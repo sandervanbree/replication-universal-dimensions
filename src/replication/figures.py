@@ -218,6 +218,14 @@ def plot_figure3(config: RunConfig, frame: pd.DataFrame) -> None:
         axis.set_title(SET_LABELS[model_set])
         axis.set_xlabel("Universality")
         axis.set_ylabel("Brain similarity")
+    legend_axis = axes[0, 0].inset_axes([0.08, 0.81, 0.30, 0.035])
+    colorbar = fig.colorbar(
+        plt.cm.ScalarMappable(norm=plt.Normalize(0, 1), cmap=cmap),
+        cax=legend_axis, orientation="horizontal", ticks=[0, 1], alpha=0.8,
+    )
+    legend_axis.set_title("Network depth", fontsize=9, pad=5)
+    colorbar.set_ticklabels(["Early", "Late"])
+    legend_axis.tick_params(length=0, labelsize=8)
     fig.tight_layout()
     _save(fig, config, "figure3_depth_resolved_relationship")
 
